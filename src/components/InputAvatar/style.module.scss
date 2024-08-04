@@ -1,0 +1,97 @@
+.avatarElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    padding-top: 80px;
+    box-sizing: border-box;
+
+    width: 80%;
+
+    h1{
+        position: absolute;
+        left: 0;
+        top: 20px;
+
+        font-size: 34px;
+    }
+
+    label{
+        margin-top: 60px;
+    }
+}
+
+.inputFile {
+    display: none;
+}
+
+.uploadButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.uploadButton:hover {
+    background-color: #f0f0f0;
+}
+
+.plusIcon {
+    font-size: 24px;
+    color: #333;
+}
+
+.uploadText {
+    font-size: 14px;
+    color: #333;
+}
+
+.avatarImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btnContainer{
+    background-color: #e1e1e1;
+    width: 170px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 7px;
+
+    position: absolute;
+
+    top: 20px;
+    right: 0;
+
+    .btnReview, .btnCode{
+        width: 50%;
+        height: 100%;
+
+        border-radius: 7px;
+
+        cursor: pointer;
+
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            background-color: #c9c7c7;
+        }
+    }
+}

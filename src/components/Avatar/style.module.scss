@@ -1,0 +1,38 @@
+:root[data-theme="light"] {
+    --avatar-title: #000;
+}
+
+:root[data-theme="dark"] {
+    --avatar-title: #fff;
+}
+
+.avatar{
+    height: fit-content;
+
+    h1{
+        font-size: 38px;
+        font-weight: 700;
+
+        color: var(--avatar-title);
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 400;
+
+        max-width: 80%;
+
+        color: var(--avatar-title);
+
+        margin-top: 30px;
+    }
+
+    .line{
+        width: 80%;
+        height: 1px;
+
+        background-color: var(--avatar-title);
+
+        margin-top: 80px;
+    }
+}

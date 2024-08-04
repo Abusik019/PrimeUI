@@ -36,13 +36,6 @@ const Root = () => {
         <ThemeContext.Consumer>
             {({ theme, setTheme }) => (
                 <>
-                    <Toggle
-                        onChange={() => {
-                            if (theme === themes.light) setTheme(themes.dark);
-                            if (theme === themes.dark) setTheme(themes.light);
-                        }}
-                        value={theme === themes.dark}
-                    />
                     <nav className={styles.navPanel}>
                         <Link  to='/'><h1>PrimeUI</h1></Link>
                         <div className={styles.inputWrapper}>
@@ -56,10 +49,19 @@ const Root = () => {
                                 <button ref={buttonRef}>&#x2715;</button>
                             )}
                         </div>
-                        <a  className={styles.github}
-                            href="https://github.com/Abusik019"
-                            target="_blank"
-                        ></a>
+                        <div className={styles.navLastSection}>
+                            <a  className={styles.github}
+                                href="https://github.com/Abusik019"
+                                target="_blank"
+                            ></a>
+                            <Toggle
+                                onChange={() => {
+                                    if (theme === themes.light) setTheme(themes.dark);
+                                    if (theme === themes.dark) setTheme(themes.light);
+                                }}
+                                value={theme === themes.dark}
+                            />
+                        </div>
                     </nav>
                     <div className={styles.container}>
                         <aside className={styles.aside}>

@@ -37,6 +37,15 @@
         font-size: 28px;
         color: var(--title-color);
     }
+}
+
+.navLastSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // width: 300px;
+    gap: 20px;
 
     .github{
         background-image: var(--github-color);
@@ -174,4 +183,10 @@
             }
         }
     }
+}
+
+
+.main{
+    width: calc(100% - 300px);
+    height: fit-content;
 }
