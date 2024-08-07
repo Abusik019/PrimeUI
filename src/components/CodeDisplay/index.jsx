@@ -1,53 +1,76 @@
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useState } from "react";
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Editor from "@monaco-editor/react";
+import { useState, useEffect } from "react";
 
 const CodeDisplay = ({ codeString }) => {
-    const [copied, setCopied] = useState(false);
+    const html = `<html>
+        <body>
+            <h1>Contact Us</h1>
+            <form>
+            <label>Name:</label>
+            <input id="name" type="text" />
+            <label>Email:</label>
+            <input id="email" type="text" />
+            </form>
 
-    const handleCopy = () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-    };
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+        </html>`;
+
+    const [editorHeight, setEditorHeight] = useState('100px');
+
+    function handleEditorValidation(markers) {
+        // model markers
+        markers.forEach((marker) => console.log("onValidate:", marker.message));
+    }
+    
+    function handleSizeChange(editor, monaco) {
+        const line = 20;
+        const number = editor.split('\n').length;
+        const height = Math.max(line * number, 200);
+
+        console.log(number)
+        
+        setEditorHeight(height);
+    }
+
+    useEffect(() => {
+        handleSizeChange(html)
+    }, [])
 
     return (
-        <div
-            style={{
-                padding: "20px",
-                borderRadius: "5px",
-                position: 'relative'
-            }}
-        >
-            <SyntaxHighlighter
-                language="javascript"
-                style={atomOneDark}
-                customStyle={{
-                    backgroundColor: "#0E222E",
-                    border: "1px solid #fff",
-                    padding: '20px',
-                    borderRadius: "5px",
-                }}
-            >
-                {codeString}
-            </SyntaxHighlighter>
-            <CopyToClipboard text={codeString} onCopy={handleCopy}>
-                <button
-                    style={{
-                        marginTop: "10px",
-                        padding: "10px 20px",
-                        borderRadius: "5px",
-                        cursor: "pointer",
-                        backgroundColor: "#fff",
-                        position: 'absolute',
-                        top: '40px',
-                        right: '40px'
-                    }}
-                >
-                    {copied ? "Copied!" : "Copy Code"}
-                </button>
-            </CopyToClipboard>
-        </div>
+        <Editor
+            width="100%"
+            height={editorHeight}
+            defaultLanguage="javascript"
+            defaultValue={html}
+            onValidate={handleEditorValidation}
+            theme="vs-dark"
+            options={{
+                readOnly: true,
+                minimap: { enabled: false },
+                scrollbar: {
+                    vertical:"hidden",
+                    horizontal: "hidden",
+                    handleMouseWheel:false,
+                },
+                tabSize: 4,
+                insertSpaces: true,
+            }}    
+            overviewRulerLanes={0}
+            onChange={handleSizeChange}
+        />
     );
 };
+
 export default CodeDisplay;

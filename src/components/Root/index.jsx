@@ -88,6 +88,7 @@ const Root = () => {
                             <Routes>
                                 <Route path="/" element={<Main />}/>
                                 <Route path="/avatar" element={<Avatar />}/>
+                                {/* <Route path="/button" element={<Avatar />}/> */}
                             </Routes>
                         </main>
                     </div>
