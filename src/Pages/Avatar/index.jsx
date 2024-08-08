@@ -1,5 +1,7 @@
 import styles from './style.module.scss';
-import InputAvatar from '../InputAvatar';
+import { Installation } from '../../components/Installation';
+import InputAvatar from '../../components/InputAvatar';
+
 
 const avatar = {
     name: "Avatar",
@@ -8,7 +10,9 @@ const avatar = {
     codeImage: "../../../src/assets/avatar-code.png",
     code: `  import { useState } from "react";
   import styles from "./style.module.scss";
-  
+  import { Installation } from '../../components/Installation/index';
+import InputAvatar from '../../components/InputAvatar/index';
+
   function InputAvatar({ componentInfo }) {
       const [imageUrl, setImageUrl] = useState('');
   
@@ -48,6 +52,9 @@ function Avatar() {
     <div className={styles.avatar}>
       <h1>{avatar.name}</h1>
       <p>{avatar.description}</p>
+      <div className={styles.line}></div>
+      <Installation componentName='avatar'/>
+      <button className={styles.warning}>The above command is for individual installation only. You may skip this step if @nextui-org/react is already installed globally.</button>
       <div className={styles.line}></div>
       <InputAvatar componentInfo={avatar}/>
     </div>

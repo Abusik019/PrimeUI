@@ -1,3 +1,5 @@
+@import '../../Scss/main.scss';
+
 :root[data-theme="light"] {
     --avatar-title: #000;
 }
@@ -35,4 +37,8 @@
 
         margin-top: 50px;
     }
+}
+
+.warning{
+    @include installation-warning;
 }

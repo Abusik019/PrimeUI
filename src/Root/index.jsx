@@ -1,11 +1,10 @@
 import styles from "./style.module.scss";
-import "../../reset.scss";
-import Toggle from "../Toggle";
-import { ThemeContext, themes } from "../contexts/ThemeContext";
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import Main from './../Main';
-import Avatar from './../Avatar/index';
+import { ThemeContext, themes } from "../Provider/contexts/ThemeContext";
+import Toggle from '../components/Toggle';
+import Avatar from "../Pages/Avatar";
+import Main from "../Pages/Main";
 
 const Root = () => {
     const [hideClearInput, setHideClearInput] = useState(false);

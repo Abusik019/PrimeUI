@@ -1,9 +1,6 @@
-import { useContext } from "react";
 import styles from "./style.module.scss";
-import { ThemeContext } from "../contexts/ThemeContext";
 
 const Toggle = ({ value, onChange }) => {
-    const { theme } = useContext(ThemeContext);
 
     return (
         <label className={styles.root} htmlFor="toggler">

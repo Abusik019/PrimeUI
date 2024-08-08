@@ -1,26 +1,26 @@
 :root[data-theme="light"] {
     --title-color: #000;
     --bg-search: #14162B;
-    --search-image: url('../../assets/white-search.svg');
+    --search-image: url('../assets/white-search.svg');
     --search-color: #fff;
-    --github-color: url('../../assets/black-github.svg');
+    --github-color: url('../assets/black-github.svg');
     --delete-btn-color: #fff;
     --aside-h1-color: #000;
-    --aside-h1-close-bg: url('../../assets/close-arrow.png');
-    --aside-h1-open-bg: url('../../assets/open-arrow.png');
+    --aside-h1-close-bg: url('../assets/close-arrow.png');
+    --aside-h1-open-bg: url('../assets/open-arrow.png');
     --aside-li-color: #000;
 }
 
 :root[data-theme="dark"] {
     --title-color: #fff;
     --bg-search: #fff;
-    --search-image: url('../../assets/black-search.svg');
+    --search-image: url('../assets/black-search.svg');
     --search-color: #000;
-    --github-color: url('../../assets/white-github.svg');
+    --github-color: url('../assets/white-github.svg');
     --delete-btn-color: #000;
     --aside-h1-color: #fff;
-    --aside-h1-close-bg: url('../../assets/white-close-arrow.png');
-    --aside-h1-open-bg: url('../../assets/white-open-arrow.png');
+    --aside-h1-close-bg: url('../assets/white-close-arrow.png');
+    --aside-h1-open-bg: url('../assets/white-open-arrow.png');
     --aside-li-color: #fff;
 }
 
@@ -44,7 +44,6 @@
     align-items: center;
     justify-content: space-between;
 
-    // width: 300px;
     gap: 20px;
 
     .github{
@@ -189,4 +188,6 @@
 .main{
     width: calc(100% - 300px);
     height: fit-content;
+
+    margin-bottom: 200px;
 }

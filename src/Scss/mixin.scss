@@ -1,0 +1,33 @@
+:root[data-theme="light"] {
+    --install-warn-border: #000000;
+    --install-warn-bg: rgb(255, 234, 0);
+    --install-warn-text: rgb(0, 0, 0);
+}
+
+:root[data-theme="dark"] {
+    --install-warn-border: #62410F;
+    --install-warn-bg: #0D0A09;
+    --install-warn-text: rgb(255, 255, 255);
+}
+
+@mixin installation-warning{
+    width: 80%;
+    height: 80px;
+
+    border-radius: 12px;
+
+    background-color: var(--install-warn-bg);
+    border: 2px solid var(--install-warn-border);
+
+    color: var(--install-warn-text);
+
+    margin-top: 20px;
+
+    font-size: 18px;
+    font-weight: 300;
+
+    padding: 10px 25px;
+    box-sizing: border-box;
+
+    text-align: left;
+}

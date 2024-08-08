@@ -1,10 +1,9 @@
+import "./Scss/main.scss";
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./components/Root";
-import ThemeProvider from './components/providers/ThemeProvider';
 import { BrowserRouter } from "react-router-dom"
-
-import "./index.scss";
+import Root from "./Root";
+import ThemeProvider from './Provider/providers/ThemeProvider';
 
 ReactDOM.render(
     <React.StrictMode>
