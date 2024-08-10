@@ -1,7 +1,7 @@
 :root[data-theme="light"] {
-    --install-warn-border: #000000;
-    --install-warn-bg: rgb(255, 234, 0);
-    --install-warn-text: rgb(0, 0, 0);
+    --install-warn-border: #ded2b0;
+    --install-warn-bg: #F5EEC4;
+    --install-warn-text: #926C23;
 }
 
 :root[data-theme="dark"] {
@@ -11,23 +11,45 @@
 }
 
 @mixin installation-warning{
-    width: 80%;
-    height: 80px;
+    width: 100%;
+    height: fit-content;
 
-    border-radius: 12px;
+    border-radius: 18px;
 
     background-color: var(--install-warn-bg);
-    border: 2px solid var(--install-warn-border);
+    border: 2px var(--install-warn-border);
+    border-style: solid;
 
     color: var(--install-warn-text);
 
     margin-top: 20px;
 
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
+    line-height: 32px;
 
-    padding: 10px 25px;
+    padding: 16px 24px;
     box-sizing: border-box;
 
     text-align: left;
+
+    text-indent: 32px;
+
+    &::before{
+        position: absolute;
+        left: 20px;
+        top: 18px;
+    
+        width: 32px;
+        height: 32px;
+    
+        content: "";
+    
+        // border: 1px solid black;
+    
+        background-image: url('./src/assets/icons/warn.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+    }
 }

@@ -14,6 +14,7 @@ export const Installation = ({ componentName }) => {
 
     return (
         <div className={styles.installation}>
+            <h1>Installation</h1>
             <ul className={styles.installationList}>
                 <li onClick={() => setInstallChoice('npx nextui-cli@latest add ')}>
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABrUlEQVR4nO2YPUvDUBSGK6ibgouLi+7ugnRQW8FJHOzShvu+J0h/gIvVwcTN2dHZxbp0cNJJ/AMO4qqDdtGlToofkWCFa2ktJm0+9D7wwoXklPPk5qbJzWQMBoPBYPjLFAqFYZI7JOskvYhSB+CWy+Wh0AIAjiJs3GtJNWzzuRib9/wopeYDC5Dc7HVDAJ5IXv805vfzK2FmwO3DVd1XSk10GXuagJs0gWcAN13GXpIFfnvLuYEFRCQPYDfOiEg+sIAhbkQkS3IjzohI9v8uYhgBmhlABLdQQ0RmLMsaJ3mQxjVwrNeQXAfwkiaBhm3b0y11OQD3aRHwADwCWGmpnSR5mQoBfuYdwLZeT3I2TQIPJBf1ehFZTYUAgAvLsqb0WqXUsr8+mu/55wBO9bT7+mJMAte2bY9oZQMkHQBv/vFOr8OO4wySPItdAMDJ1/mlUmkUQE0/XiwWxzr9Psm92AVIvpLcIlkgedWmgRqAJX8m9JBc859eSRDoaxBGoB/bKgEEKmEEFhIgMBdYoClRjVHgMBMWf4O1+Vi8i7DxW/9fvSebuwaDwWAwZBLMB2arKsiaWALRAAAAAElFTkSuQmCC" />                

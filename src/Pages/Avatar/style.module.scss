@@ -10,6 +10,7 @@
 
 .avatar{
     height: fit-content;
+    width: 80%;
 
     h1{
         font-size: 38px;
@@ -22,7 +23,7 @@
         font-size: 18px;
         font-weight: 400;
 
-        max-width: 80%;
+        max-width: 100%;
 
         color: var(--avatar-title);
 
@@ -30,7 +31,7 @@
     }
 
     .line{
-        width: 80%;
+        width: 100%;
         height: 1px;
 
         background-color: var(--avatar-title);
@@ -40,5 +41,14 @@
 }
 
 .warning{
+    position: relative;
+
     @include installation-warning;
+}
+
+.sidePanel{
+    width: 20%;
+    height: fit-content;
+
+    border: 1px solid #000;
 }
