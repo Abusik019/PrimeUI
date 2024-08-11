@@ -150,7 +150,7 @@ function Avatar() {
                     may skip this step if @nextui-org/react is already installed
                     globally.
                 </button>
-                <Import />
+                <Import componentName='Avatar'/>
                 <InputAvatar componentInfo={avatar} />
             </div>
             <section className={styles.sidePanel}>
