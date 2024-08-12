@@ -16,7 +16,7 @@ function InputAvatar({ componentInfo }) {
 
     return (
         <div className={styles.avatarElement}>
-            <h1>Usage</h1>
+            <h1 className="usage">Usage</h1>
             <div className={styles.btnContainer}>
                 <button 
                     className={styles.btnReview}

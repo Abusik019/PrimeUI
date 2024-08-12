@@ -1,9 +1,13 @@
 :root[data-theme="light"] {
     --li-border: #000;
+    --install-title: #000;
+    --li-h1: #000;
 }
 
 :root[data-theme="dark"] {
     --li-border: #fff;
+    --install-title: #fff;
+    --li-h1: #fff;
 }
 
 .installation{
@@ -18,6 +22,7 @@
 
     &>h1{
         font-size: 28px;
+        color: var( --install-title);
     }
 
     .installationList{
@@ -32,17 +37,17 @@
             align-items: center;
             justify-content: space-between;
             gap: 7px;
-
+            
             width: fit-content;
             
             padding: 5px;
             
-            border-bottom: 2px solid transparent;
-
-            transition: all .3s ease-in-out;
-
             cursor: pointer;
-            
+
+            &.active{
+                border-bottom: 2px solid var(--li-border);
+            }
+
             img{
                 width: 20px;
                 height: 20px;
@@ -53,12 +58,11 @@
                 font-weight: 400;
 
                 height: 20px;
-            }
 
-            &:hover{
-                border-bottom: 2px solid var(--li-border);
+                color: var(--li-h1);
             }
         }
+
     }
 
     .installationCode{

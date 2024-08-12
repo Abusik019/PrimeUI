@@ -12,14 +12,14 @@
     height: fit-content;
     width: 80%;
 
-    h1{
+    &> h1{
         font-size: 38px;
         font-weight: 700;
 
         color: var(--avatar-title);
     }
 
-    p{
+    &> p{
         font-size: 18px;
         font-weight: 400;
 

@@ -3,6 +3,7 @@ import { Installation } from "../../components/Installation";
 import InputAvatar from "../../components/InputAvatar";
 import { Import } from "../../components/Import";
 import { NavigationPanel } from "../../components/NavigationPanel";
+import { Links } from "../../components/Links";
 
 const avatar = {
     name: "Avatar",
@@ -143,6 +144,7 @@ function Avatar() {
             <div className={styles.avatar}>
                 <h1>{avatar.name}</h1>
                 <p>{avatar.description}</p>
+                <Links />
                 <div className={styles.line}></div>
                 <Installation componentName="avatar" />
                 <button className={styles.warning}>

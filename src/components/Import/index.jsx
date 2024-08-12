@@ -1,5 +1,4 @@
 import styles from "./style.module.scss";
-import copyBtn from "../../assets/copy.png";
 import CopyToClipboard from "react-copy-to-clipboard";
 import doneIcon from '../../assets/done.svg';
 import copyIcon from '../../assets/copy.png';
@@ -10,10 +9,10 @@ export const Import = ({ componentName }) => {
 
     return (
         <div className={styles.import}>
-            <h1>Import</h1>
+            <h1 className="import">Import</h1>
             <div className={styles.importContent}>
-                {componentName}
-                <CopyToClipboard text={`${componentName}`}>
+               <p><span>import</span>{`{ ${componentName} }`} <span>from</span> <span className={styles.greenMarker}> { `"@nextui-org/${componentName.toLowerCase()}";`}</span></p>
+                <CopyToClipboard text={`import {${componentName}} from "@nextui-org/${componentName.toLowerCase()}"`}>
                     <button
                         className={styles.copyButton}
                         onClick={() => {

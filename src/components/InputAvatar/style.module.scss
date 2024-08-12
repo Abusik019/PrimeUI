@@ -1,3 +1,11 @@
+:root[data-theme="light"] {
+    --usage-title: #000;
+}
+
+:root[data-theme="dark"] {
+    --usage-title: #fff;
+}
+
 .avatarElement {
     display: flex;
     align-items: center;
@@ -19,6 +27,8 @@
         top: 20px;
 
         font-size: 28px;
+
+        color: var(--usage-title);
     }
 
     label{

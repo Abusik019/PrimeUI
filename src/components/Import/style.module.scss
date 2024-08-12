@@ -1,3 +1,11 @@
+:root[data-theme="light"] {
+    --import-title: #000;
+}
+
+:root[data-theme="dark"] {
+    --import-title: #fff;
+}
+
 .import{
     margin-top: 50px;
 
@@ -6,5 +14,56 @@
 
     h1{
         font-size: 28px;
+        color: var(--import-title);
     }
 }
+
+.importContent{
+    background-color: #181818;
+
+    border-radius: 15px;
+
+    width: 100%;
+    height: 45px;
+
+    color: rgb(238, 238, 238);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    margin-top: 30px;
+
+    p{
+        display: flex;
+        gap: 10px;
+
+        .greenMarker{
+            color: rgb(134, 194, 44);
+        }
+
+        span{
+            color: rgb(148, 43, 148);
+        }
+    }
+    
+
+    .copyButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 10px;
+        display: inline-flex;
+        align-items: center;
+    
+        img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
