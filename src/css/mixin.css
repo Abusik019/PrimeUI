@@ -1,0 +1,11 @@
+:root[data-theme=light] {
+  --install-warn-border: #ded2b0;
+  --install-warn-bg: #F5EEC4;
+  --install-warn-text: #926C23;
+}
+
+:root[data-theme=dark] {
+  --install-warn-border: #62410F;
+  --install-warn-bg: #0D0A09;
+  --install-warn-text: rgb(255, 255, 255);
+}/*# sourceMappingURL=mixin.css.map */

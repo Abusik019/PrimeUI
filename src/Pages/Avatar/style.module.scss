@@ -8,11 +8,11 @@
     --avatar-title: #fff;
 }
 
-.avatar{
+.main__container{
     height: fit-content;
     width: 80%;
 
-    &> h1{
+    & h1{
         font-size: 38px;
         font-weight: 700;
 
@@ -36,7 +36,7 @@
 
         background-color: var(--avatar-title);
 
-        margin-top: 50px;
+        margin-top: 26px;
     }
 }
 

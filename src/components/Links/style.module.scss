@@ -1,5 +1,5 @@
 .links{
-    margin-top: 50px;
+    margin-top: 26px;
 
     display: flex;
     align-items: center;
@@ -12,20 +12,20 @@
         width: fit-content;
         height: fit-content;
 
-        padding: 10px;
+        padding: 10px 18px;
 
         background-color: #18181b;
 
-        border-radius: 9px;
+        border-radius: 12px;
 
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
 
         text-wrap: nowrap;
 
         a{
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 24px;
 
@@ -34,8 +34,8 @@
         }
 
         img{
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
         }
     }
 }

@@ -30,8 +30,18 @@ const LINKS = [
 ];
 
 export const Links = () => {
-  const randomCount = Math.floor(Math.random() * 4) + 2;
-  const randomLinks = LINKS.sort(() => 0.5 - Math.random()).slice(0, randomCount);
+
+  const maxItems = 5,
+        minItems = 2;
+
+  const startIndex = Math.floor(Math.random() * (LINKS.length - minItems + 1)),
+        endIndex = Math.min(
+          startIndex + minItems + Math.floor(Math.random() * (maxItems - minItems + 1)) - 1,
+          LINKS.length - 1
+        );
+  
+  const randomLinks = LINKS.slice(startIndex, endIndex + 1);
+
 
   return (
     <ul className={styles.links}>
