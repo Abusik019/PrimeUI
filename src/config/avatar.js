@@ -47,14 +47,14 @@ export const avatarConfig = {
         {
             line: false,
             title: 'Import',
-            description: '',
+            description: 'NextUI exports 3 avatar-related components:',
             message: {
                 status: 'error',
-                text: 'test'
+                text: ''
             },
             content: 'import {Avatar, AvatarGroup, AvatarIcon} from "@nextui-org/avatar";',
             list: {
-                direction: 'line', 
+                direction: 'column', 
                 items: [
                     {
                         name: 'Avatar',

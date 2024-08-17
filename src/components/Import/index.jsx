@@ -4,15 +4,25 @@ import doneIcon from '../../assets/done.svg';
 import copyIcon from '../../assets/copy.png';
 import { useState } from "react";
 
-export const Import = ({ componentName }) => {
+export const Import = ({ title, content, list, description }) => {
+    console.log(list);
     const [copyBtn, setCopyBtn] = useState(copyIcon);
 
     return (
         <div className={styles.import}>
-            <h1 className="import">Import</h1>
+            <h1 className="import">{title}</h1>
+            <p>{description}</p>
+            <ul className={styles.importList} style={{flexDirection: list.direction === "column" ? "column" : "row"}}>
+                {list.items.map((item, index) => (
+                    <li key={index}>
+                        <h1>{item.name}:</h1>
+                        <p>{item.description}</p>
+                    </li>
+                ))}
+            </ul>
             <div className={styles.importContent}>
-               <p><span>import</span>{`{ ${componentName} }`} <span>from</span> <span className={styles.greenMarker}> { `"@nextui-org/${componentName.toLowerCase()}";`}</span></p>
-                <CopyToClipboard text={`import {${componentName}} from "@nextui-org/${componentName.toLowerCase()}"`}>
+                <h1>{content}</h1>
+                <CopyToClipboard text={content}>
                     <button
                         className={styles.copyButton}
                         onClick={() => {
